@@ -1,5 +1,5 @@
 document.getElementById("create").addEventListener("click", function(){
-  document.getElementById("ticket-section").className = "ticket shown";
+
 
   var name = document.getElementById('name').value;
   var km = document.getElementById('km').value;
@@ -39,6 +39,9 @@ document.getElementById("create").addEventListener("click", function(){
       kmError.innerHTML = 'Inserire un valore valido';
   }
 
+  if (nameError.innerHTML == '' && kmError.innerHTML == '') {
+      document.getElementById("ticket-section").className = "ticket shown";
+  }
 });
 
 document.getElementById("cancel").addEventListener("click", function(){
