@@ -9,6 +9,8 @@ document.getElementById("create").addEventListener("click", function(){
   var discount = document.getElementById('discount');
   var coach = document.getElementById('coach');
   var cpCode = document.getElementById('cp-code');
+  var nameError = document.getElementById('name-error');
+  var kmError = document.getElementById('km-error');
 
   price.innerHTML = (km*age*0.21).toFixed(2)+'€';
   ticketName.innerHTML = name;
@@ -24,6 +26,19 @@ document.getElementById("create").addEventListener("click", function(){
   coach.innerHTML = randomNumber(1,10);
   cpCode.innerHTML = randomNumber(90000,100000);
 
+  nameError.innerHTML = '';
+  kmError.innerHTML = '';
+  if ((name == '') && (km <= 0 || km == '')){
+      nameError.innerHTML = 'Inserire un nome valido';
+      kmError.innerHTML = 'Inserire un valore valido';
+  } else if (name == ''){
+      nameError.innerHTML = 'Inserire un nome valido';
+      kmError.innerHTML = '';
+  } else if (km == '' || km <= 0){
+      nameError.innerHTML = '';
+      kmError.innerHTML = 'Inserire un valore valido';
+  }
+
 });
 
 document.getElementById("cancel").addEventListener("click", function(){
@@ -31,8 +46,13 @@ document.getElementById("cancel").addEventListener("click", function(){
 
   var name = document.getElementById('name');
   var km = document.getElementById('km');
+  var nameError = document.getElementById('name-error');
+  var kmError = document.getElementById('km-error');
+
   name.value = '';
   km.value = '';
+  nameError.innerHTML = '';
+  kmError.innerHTML = '';
 });
 
 

@@ -40,6 +40,12 @@ h2 {
     box-shadow: 1px 1px 5px #252424;
 }
 
+.form p {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 .form .row:first-child{
     width: 100%;
     display: flex;
