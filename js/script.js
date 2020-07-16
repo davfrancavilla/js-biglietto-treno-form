@@ -31,12 +31,15 @@ document.getElementById("create").addEventListener("click", function(){
   if ((name == '') && (km <= 0 || km == '')){
       nameError.innerHTML = 'Inserire un nome valido';
       kmError.innerHTML = 'Inserire un valore valido';
+      document.getElementById("ticket-section").className = "ticket hidden";
   } else if (name == ''){
       nameError.innerHTML = 'Inserire un nome valido';
       kmError.innerHTML = '';
+      document.getElementById("ticket-section").className = "ticket hidden";
   } else if (km == '' || km <= 0){
       nameError.innerHTML = '';
       kmError.innerHTML = 'Inserire un valore valido';
+      document.getElementById("ticket-section").className = "ticket hidden";
   }
 
   if (nameError.innerHTML == '' && kmError.innerHTML == '') {
