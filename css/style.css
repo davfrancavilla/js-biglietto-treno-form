@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aa2b51;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: white;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 30px 0;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #252424;
+    padding: 20px;
+}
+
+.form .row:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form .row>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px
+}
+
+.form label {
+    color: #aa2b51;
+}
+
+.form input {
+    text-align: center;
+    ste
+}
+
+.form input:focus,
+.form select:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form input,
+.form select {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: 12px;
+    border: 1px solid #aa2b51;
+}
+
+.form button {
+    font-size: 16px;
+    padding: 5px 3px;
+    color: #aa2b51;
+    background-color: #cccccc;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:active {
+    background-color: #a3a3a3;
+}
