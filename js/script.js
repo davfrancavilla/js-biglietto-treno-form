@@ -69,7 +69,5 @@ document.getElementById("cancel").addEventListener("click", function(){
 
 // funziona che genera un numero casuale (min incluso e max escluso)
 function randomNumber(min, max){
-    min = Math.ceil(min);
-    max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 };
