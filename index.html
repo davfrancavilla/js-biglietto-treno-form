@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Biglietto treno</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <div class="container">
-            <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-            <div class="form">
-                <div class="row">
-                    <div class="name">
-                        <label for="name">Nome Cognome</label>
-                        <input type="text" id="name" name="" value="">
-                    </div>
-                    <div class="km">
-                        <label for="km">Km da percorrere</label>
-                        <input type="number" id="km" name="" value="">
-                    </div>
-                    <div class="age">
-                        <label for="age">Fascia d'età</label>
-                        <select id="age">
-                            <option value="Adulto">Adulto</option>
-                            <option value="Minorenne">Minorenne</option>
-                            <option value="Over 65">Over 65</option>
-                        </select>
-                    </div>
+
+<head>
+    <meta charset="utf-8">
+    <title>Biglietto treno</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>calcola il prezzo del tuo biglietto</h2>
+        <div class="form">
+            <div class="row">
+                <div class="name">
+                    <label for="name">Nome Cognome</label>
+                    <input type="text" id="name" name="" value="">
                 </div>
-                <div class="row">
-                    <button type="button" name="button">Genera</button>
-                    <button type="button" name="button">Annulla</button>
+                <div class="km">
+                    <label for="km">Km da percorrere</label>
+                    <input type="number" id="km" name="" value="">
+                </div>
+                <div class="age">
+                    <label for="age">Fascia d'età</label>
+                    <select id="age">
+                        <option value="1">Adulto</option>
+                        <option value="0.8">Minorenne</option>
+                        <option value="0.6">Over 65</option>
+                    </select>
                 </div>
             </div>
+            <div class="row">
+                <button type="button" name="button" id="create">Genera</button>
+                <button type="button" name="button" id="cancel">Annulla</button>
+            </div>
         </div>
-        <script src="js/script.js" charset="utf-8"></script>
-    </body>
+        <h2>il tuo biglietto</h2>
+        <div id="ticket-section" class="ticket hidden">
+            <table>
+                <tr>
+                    <td colspan="5">Dettaglio Passeggeri</td>
+                </tr>
+                <tr>
+                    <th>NOME PASSEGGERO</th>
+                    <th>Offerta</th>
+                    <th>Carrozza</th>
+                    <th>Codice CP</th>
+                    <th>Costo biglietto</th>
+                </tr>
+                <tr>
+                    <td id="ticket-name"></td>
+                    <td id="discount"></td>
+                    <td id="coach"></td>
+                    <td id="cp-code"></td>
+                    <td id="price"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/script.js" charset="utf-8"></script>
+</body>
+
 </html>
